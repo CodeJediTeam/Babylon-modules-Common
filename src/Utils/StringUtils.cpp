@@ -2,7 +2,7 @@
 
 #include <stdarg.h>
 
-namespace Common::Utils
+namespace Babylon::Common::Utils
 {
 
 const std::string Format(const std::string value, ...)
@@ -95,4 +95,4 @@ bool Utf16ToUtf8(const std::wstring& utf16, std::string& utf8)
     // return true;
 }
 
-} // namespace Common::Utils
+} // namespace Babylon::Common::Utils
