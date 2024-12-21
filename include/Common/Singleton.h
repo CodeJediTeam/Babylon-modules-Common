@@ -29,14 +29,14 @@ class Singleton
 public:
     using Finaliser = SingletonFinalizer<T>;
 
-    static inline T& Instance()
+    static T& Instance()
     {
         CreateInstance();
         return *__instance;
     }
 
 protected:
-    static inline void CreateInstance()
+    static void CreateInstance()
     {
         if (!__instance)
         {
@@ -44,7 +44,7 @@ protected:
         }
     }
 
-    static inline void DestroyInstance()
+    static void DestroyInstance()
     {
         if (__instance)
         {
